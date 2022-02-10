@@ -1,0 +1,42 @@
+$light-color: #f5fbef;
+$pink-color: #e85d75;
+$blue-color: #8ca0d7;
+$green-color: #3f6c51;
+
+body {
+  input:focus {
+    outline: none;
+  }
+
+  p {
+    margin-bottom: 0 !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  ul {
+    list-style: none !important;
+    list-style-type: none !important;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@mixin container {
+  padding: 0 15px;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin rwd_vertically {
+  height: calc(100vh - 90px);
+  min-height: 600px;
+  max-height: 1200px;
+}

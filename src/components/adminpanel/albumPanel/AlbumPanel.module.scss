@@ -1,0 +1,84 @@
+@import "./styles/index.module.scss";
+
+.album_panel {
+  @include container;
+  height: fit-content;
+  min-height: calc(100vh - 90px);
+  padding: 20px 0;
+  @include flex;
+  width: 100%;
+  background-color: $blue-color;
+  text-align: center;
+
+  .album_panel_container {
+    padding: 25px 50px;
+    background-color: $light-color;
+    width: 500px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    background-color: $blue-color;
+    color: $light-color;
+    border: none;
+    margin: 10px 0;
+    padding: 10px 15px;
+
+    &::placeholder {
+      color: $light-color;
+    }
+  }
+
+  .add_btn {
+    color: $pink-color;
+    width: unset;
+    height: unset;
+    margin-left: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 3px;
+  }
+
+  .songs_label {
+    @include flex;
+  }
+
+  .song {
+    @include flex;
+  }
+
+  .modal {
+    background-color: $light-color;
+    padding: 25px 50px;
+    margin-left: 20px;
+  }
+
+  label {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .remove_btn {
+    color: $green-color;
+    width: unset;
+    height: unset;
+    margin-left: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 3px;
+  }
+
+  button {
+    background-color: $green-color;
+    border: none;
+    padding: 10px 15px;
+    color: $light-color;
+    margin: 10px 0;
+  }
+
+  .cover {
+    width: 100px;
+  }
+}

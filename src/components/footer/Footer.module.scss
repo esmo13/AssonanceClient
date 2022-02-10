@@ -1,0 +1,17 @@
+@import "./styles/index.module.scss";
+
+footer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: $light-color;
+
+  img {
+    width: 100px;
+  }
+
+  .footer_container {
+    @include flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

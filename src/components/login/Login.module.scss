@@ -1,0 +1,57 @@
+@import "./styles/index.module.scss";
+
+.main {
+  @include container;
+  @include rwd_vertically;
+  width: 100%;
+  background-color: $blue-color;
+
+  .form_container {
+    width: 100%;
+    height: 100%;
+    @include flex;
+    flex-direction: column;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      background-color: $light-color;
+      padding: 25px;
+
+      .logo {
+        margin-bottom: 10px;
+        width: 300px;
+      }
+
+      input {
+        background: $blue-color;
+        border: none;
+        margin: 5px 0;
+        padding: 10px 15px;
+        color: $light-color;
+
+        &::placeholder {
+          color: $light-color;
+        }
+      }
+
+      button {
+        background-color: $green-color;
+        padding: 10px 15px;
+        color: $light-color;
+        border: none;
+        margin-top: 10px;
+      }
+
+      .register_msg {
+        text-align: center;
+        margin-top: 10px;
+
+        a {
+          text-decoration: underline !important;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

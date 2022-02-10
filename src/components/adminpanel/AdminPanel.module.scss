@@ -1,0 +1,139 @@
+@import "./styles/index.module.scss";
+
+.modal_bg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(21, 21, 21, 0.8);
+  top: 0;
+  z-index: -1;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  @include rwd_vertically;
+  @include container;
+  @include flex;
+  flex-direction: column;
+  background-color: $blue-color;
+
+  .main_bg {
+    background-color: $light-color;
+    color: $blue-color;
+    padding: 30px 40px;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 25px;
+    }
+
+    input,
+    select {
+      background: $blue-color;
+      border: none;
+      margin: 5px 0;
+      padding: 10px 15px;
+      color: $light-color;
+      width: 100%;
+      margin-bottom: 25px;
+
+      &::placeholder {
+        color: $light-color;
+      }
+    }
+
+    p {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .user_btn {
+      width: unset;
+      height: unset;
+      font-size: 24px;
+      cursor: pointer;
+      color: $pink-color;
+      margin-left: 20px;
+    }
+  }
+
+  /* modal etc/*/
+  .modal {
+    position: absolute;
+    background-color: $light-color;
+    width: 800px;
+    height: calc(100vh - 150px);
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border: 1px solid black;
+
+    .edit_form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      h1 {
+        text-align: center;
+      }
+
+      input,
+      select {
+        margin: 20px 0;
+        width: 80%;
+        padding: 8px 12px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: $green-color;
+        color: $light-color;
+        width: 200px;
+        border: none;
+        margin-top: 20px;
+      }
+    }
+
+    .close_btn {
+      width: 50px;
+      height: 50px;
+      background-color: $light-color;
+      position: absolute;
+      top: 40px;
+      right: 20px;
+      cursor: pointer;
+
+      &::after,
+      &::before {
+        width: 80%;
+        height: 2px;
+        background-color: black;
+        content: "";
+        display: block;
+        position: absolute;
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .updateMessage {
+    color: green;
+    margin-top: 10px;
+  }
+}
+
+.album_link {
+  color: $green-color;
+  font-size: 12px;
+  margin-bottom: 10px !important;
+}

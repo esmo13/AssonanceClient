@@ -1,0 +1,25 @@
+@import "./styles/index.module.scss";
+
+nav {
+  @include flex;
+  @include container;
+  justify-content: space-between;
+  background-color: $light-color;
+  height: 90px;
+
+  .logo {
+    width: 100px;
+  }
+
+  .buttons {
+    @include flex;
+
+    .nav_btn {
+      color: $pink-color !important;
+      margin: 0 10px;
+      padding: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  }
+}

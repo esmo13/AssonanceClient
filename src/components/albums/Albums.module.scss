@@ -1,0 +1,61 @@
+@import "./styles/index.module.scss";
+
+.main {
+  background-color: $blue-color;
+  height: fit-content;
+  min-height: calc(100vh - 90px);
+  padding: 30px 20px;
+
+  .main_container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .welcome {
+      @include flex;
+
+      img {
+        width: 150px;
+      }
+
+      .welcome_desc {
+        margin-left: 20px;
+        font-weight: 500;
+      }
+    }
+
+    .stats {
+      margin-top: 20px;
+      border-top: 3px solid $green-color;
+      border-bottom: 3px solid $green-color;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-evenly;
+
+      .stat {
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .albums {
+    h1 {
+      margin: 30px 0;
+    }
+
+    .album {
+      background-color: $light-color;
+      color: $blue-color;
+      width: 100%;
+      display: flex;
+      margin-bottom: 20px;
+      padding: 20px;
+
+      img {
+        margin-right: 30px;
+        width: 300px;
+      }
+    }
+  }
+}
