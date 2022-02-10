@@ -29,7 +29,6 @@ const SingleAlbum = ({ user }) => {
       })
       .then(() => {
         setFlag(true);
-        console.log("siema przed");
       })
       .then(async () => {
         await axios
@@ -93,14 +92,9 @@ const SingleAlbum = ({ user }) => {
     submitRating(rate / 20);
   };
   const handleComment = () => {
-    console.log(comment);
-    console.log(album);
-
     var temp = comment;
     temp.album_ = album;
     setComment(temp);
-
-    console.log(comment);
     axios
       .post("https://localhost:44338/api/comments/", comment)
       .then(() => setCommentsUpdatedFlag(true));
@@ -140,7 +134,7 @@ const SingleAlbum = ({ user }) => {
               </div>
               <div className={styles.info}>
                 <span>Released</span>
-                <p>{album.released}</p>
+                <p>{album.released.substring(0, 10)}</p>
               </div>
               <div className={styles.info}>
                 <span>Genre</span>
